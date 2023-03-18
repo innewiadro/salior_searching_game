@@ -214,6 +214,14 @@ def main():
 
         search_num += 1
 
+        if search_num > 3:
+            print(f"Niesty nie udało się odnaleźć rozbitka :(")
+            decision = input("Czy chcesz spróbowac ponownie? T/N")
+            if decision == "T":
+                main()
+            else:
+                sys.exit()
+
 
 if __name__ == "__main__":
     main()
